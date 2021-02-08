@@ -1,11 +1,8 @@
 ## Programming Technologies
-### Task 9. Synchronized.
->Write a program that results in a (**deadlock**) situation. 
+### Task 12. 12. Multi-user chat. 
+>Write a text multi-user chat. The user controls the client. There is no user on the server. The server is in charge of sending messages between clients. By default, a message is sent to **all chat participants**. There is a command to send a message to a specific user (**@senduser Vasya**). The program works over the **TCP protocol** 
 ---
-### Задание 9. Synchronized.
->Написать текстовый чат для двух пользователей на сокетах. Чат должен быть реализован по принципу клиент-сервер. Один пользователь находится на сервере, второй --- на клиенте. Адреса и порты задаются через командную строку: клиенту --- куда соединяться, серверу --- на каком порту слушать. При старте программы выводится текстовое приглашение, в котором можно ввести одну из следующих команд:  
--Задать имя пользователя (**@name Vasya**)  
--Послать текстовое сообщение (**Hello**)  
--Выход (**@quit**)  
-Принятые сообщения автоматически выводятся на экран. Программа работает по протоколу **UDP**.
+### Задание 12. Многопользовательский чат.
+>Написать текстовый многопользовательский чат. Пользователь управляет клиентом. На сервере пользователя нет. Сервер занимается пересылкой сообщений между клиентами. По умолчанию сообщение посылается **всем участникам чата**. Есть команда послать сообщение конкретному пользователю (**@senduser Vasya**). Программа работает по протоколу **TCP**
+
 
