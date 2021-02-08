@@ -62,7 +62,15 @@ public class Handler {
                         System.exit(1);
                     } else if(cmd[0].equals("@name"))
                         clientsName.set(count, cmd[1]);
-                    else HelpMsg();
+                    else if(cmd[0].equals("@senduser")){
+                        for(int i = 0; i < clientsName.size(); i++)
+                            if(clientsName.get(i).equals(cmd[1]) && clients.get(i).isConnected()){
+                                DataOutputStream out = new DataOutputStream(clients.get(i).getOutputStream());
+                                out.flush();
+                                out.writeBytes("[" + clientsName.get(id) + "](private): " + received + "\n");
+                            }
+                                
+                    }else HelpMsg();
                 }else
                     for(Socket i: clients){
                         if(i != clientSocket && i.isConnected()) {
