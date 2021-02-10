@@ -50,7 +50,7 @@ public class Main {
 
 
 
-        Socket clientSocket = new Socket( InetAddress.getByName(ip), 4343 );
+        Socket clientSocket = new Socket( InetAddress.getByName(ip), port );
         DataOutputStream out = new DataOutputStream( clientSocket.getOutputStream() );
         System.out.println( "Connected to server..." );
         System.out.print("Input username: ");
