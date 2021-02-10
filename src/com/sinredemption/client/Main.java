@@ -36,7 +36,7 @@ public class Main {
 
     public static void main( String[] args ) throws UnknownHostException, IOException {
         String ip = "localhost";
-        int port = 4343;
+        int port = 5555;
 
         for (int i = 0; i < args.length; i++) {
             if(args[i].equals("-ip")) {
@@ -50,7 +50,7 @@ public class Main {
 
 
 
-        Socket clientSocket = new Socket( ip, 4343 );
+        Socket clientSocket = new Socket( InetAddress.getByName(ip), 4343 );
         DataOutputStream out = new DataOutputStream( clientSocket.getOutputStream() );
         System.out.println( "Connected to server..." );
         System.out.print("Input username: ");
