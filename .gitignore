@@ -3,3 +3,6 @@
 /compile.sh
 /run_server.sh
 /server.sh
+/.idea/
+/out/
+/Programming_Technology_12.iml

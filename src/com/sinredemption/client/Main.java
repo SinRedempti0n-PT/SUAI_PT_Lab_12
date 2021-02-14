@@ -63,8 +63,12 @@ public class Main {
         while ( a ) {
             //System.out.println( "enter data to send" );
             String msg = sc.nextLine();
-            String[] cmd = msg.split(" ", 3);
-            out.writeBytes( msg + "\n" );
+            String[] cmd = msg.split(" ", 2);
+            if(cmd[0].equals("@exit")){
+                clientSocket.close();
+                System.exit(0);
+            }else
+                out.writeBytes( msg + "\n" );
         }
 
     }
