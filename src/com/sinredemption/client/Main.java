@@ -3,6 +3,7 @@ package com.sinredemption.client;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.InetAddress;
@@ -58,10 +59,11 @@ public class Main {
         out.writeBytes(sc.nextLine() + "\n");
 
         new MessageListener(clientSocket).start();
-
-        while ( true ) {
+        boolean a = true;
+        while ( a ) {
             //System.out.println( "enter data to send" );
             String msg = sc.nextLine();
+            String[] cmd = msg.split(" ", 3);
             out.writeBytes( msg + "\n" );
         }
 
